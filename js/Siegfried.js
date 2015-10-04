@@ -6,7 +6,7 @@ function parseDecimal(str) {
 	var result = parseInt(str, 10);
 	
 	if ( isNaN(result) ) {
-		postError("无法解析的数字:" + str);
+		postError("無法解析的數字:" + str);
 		return 0;
 	} else {
 		return result;
@@ -22,7 +22,7 @@ function parseTime(str) {
 	var result = ((iHour * 60) + iMin) * 60 + iSec;
 	
 	if ( isNaN(result) ) {
-		postError("无法解析的时间:" + str);
+		postError("無法解析的時間:" + str);
 		return 0;
 	} else {
 		return result;
@@ -60,7 +60,7 @@ function getCoordinate(string) {
 		coord.y = string.substr( iPos+1, string.length-(iPos+1) );
 	}
 	if ( isNaN(coord.x) || isNaN(coord.y) )
-		postError("无法解析的坐标:" + string);
+		postError("無法解析的坐標:" + string);
 	return coord;
 }
 
@@ -92,7 +92,7 @@ function getStrBetween(string, start, end, maxLength) {
 function getClassName(obj) {
 	var className = "";
 	if (obj && obj.constructor)
-		className = getStrBetween(obj.constructor.toString(), "function ", "(", null);//等效于 getFunctionName(obj.constructor)
+		className = getStrBetween(obj.constructor.toString(), "function ", "(", null);//等效於 getFunctionName(obj.constructor)
 	return className;
 }
 function getFunctionName(func) {
