@@ -6,7 +6,7 @@ function parseDecimal(str) {
 	var result = parseInt(str, 10);
 	
 	if ( isNaN(result) ) {
-		postError("无法解析的数字:" + str);
+		postError("無法解析的數字:" + str);
 		return 0;
 	} else {
 		return result;
@@ -22,7 +22,7 @@ function parseTime(str) {
 	var result = ((iHour * 60) + iMin) * 60 + iSec;
 	
 	if ( isNaN(result) ) {
-		postError("无法解析的时间:" + str);
+		postError("無法解析的時間:" + str);
 		return 0;
 	} else {
 		return result;
@@ -60,7 +60,7 @@ function getCoordinate(string) {
 		coord.y = string.substr( iPos+1, string.length-(iPos+1) );
 	}
 	if ( isNaN(coord.x) || isNaN(coord.y) )
-		postError("无法解析的坐标:" + string);
+		postError("無法解析的座標:" + string);
 	return coord;
 }
 
@@ -93,7 +93,7 @@ function getStrBetween(string, start, end, maxLength) {
 function getClassName(obj) {
 	var className = "";
 	if (obj && obj.constructor)
-		className = getStrBetween(obj.constructor.toString(), "function ", "(", null);//等效于 getFunctionName(obj.constructor)
+		className = getStrBetween(obj.constructor.toString(), "function ", "(", null);//等效於 getFunctionName(obj.constructor)
 	return className;
 }
 function getFunctionName(func) {
@@ -192,19 +192,19 @@ function getOs()
 {
    var OsObject = "";
    if(navigator.userAgent.indexOf("MSIE")>0) {
-        return "MSIE";       //IE浏览器
+        return "MSIE";       //IE瀏覽器
    }
    if(isFirefox=navigator.userAgent.indexOf("Firefox")>0){
-        return "Firefox";     //Firefox浏览器
+        return "Firefox";     //Firefox瀏覽器
    }
    if(isSafari=navigator.userAgent.indexOf("Safari")>0) {
-        return "Safari";      //Safan浏览器
+        return "Safari";      //Safan瀏覽器
    }
    if(isCamino=navigator.userAgent.indexOf("Camino")>0){
-        return "Camino";   //Camino浏览器
+        return "Camino";   //Camino瀏覽器
    }
    if(isMozilla=navigator.userAgent.indexOf("Gecko/")>0){
-        return "Gecko";    //Gecko浏览器
+        return "Gecko";    //Gecko瀏覽器
    }
 } 
 
@@ -265,8 +265,8 @@ function AjaxRequestText()
 	{
 	    /************
 	    if (request.readyState == 4) { // 完成
-            if (request.status == 200) { // 响应正常
-                //将响应的文本分割成Span元素
+            if (request.status == 200) { // 響應正常
+                //將響應的文本分割成Span元素
                 //alert(id+"\n"+req.responseText);
                 //document.getElementById(id).innerHTML = request.responseText;
                 var text = request.responseText;
